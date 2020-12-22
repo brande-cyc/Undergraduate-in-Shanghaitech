@@ -1,0 +1,25 @@
+\section{DIRECT SUM}
+\begin{enumerate}
+	\item \textbf{Solution:}
+	\begin{enumerate}
+		\item 
+		\begin{itemize}
+		\item Firstly, we show that $span\{B_1\}  + span\{B_2\} = span\{B_1\cup B_2\} = V$. Since $B_1\cup B_2 = B$, we have $span\{B_1\}  + span\{B_2\} = span{B} = V$.
+		\item Secondly, we show that $span\{B_1\} \cap span\{B_2\} = \vec{0}$. Since $B_1 \cap B_2$ and they are subsets of $B$, vectors of $B_1,B_2$ are linear independent of each other. Assume there exist any vector $\vec{x}\in span{B_1},x\in span{B_2}$, then 
+		$$\vec{x}=\sum_{i=1}^m\lambda_i\vec{b_i} = \sum_{i=1}^{n-m}\lambda_i\vec{b}_i$$
+		This implies that 
+		$$\sum_{i=1}^m\lambda_i\vec{b_i}-\sum_{i=1}^{n-m} \lambda_i\vec{b}_i = \sum_{i=1}^n\lambda_i\vec{b_i}=0$$
+		We determine that $\lambda_i=0,\forall i$ according to the property of basis. This means
+		$$span\{B_1\}\cap span\{B_2\}=\vec{0}$$
+		By the definition of direct sum, $V=span\{B_1\}\oplus span\{B_2\}$. Q.E.D.
+
+		\end{itemize}
+	\end{enumerate}
+	\item \textbf{Solution:}
+	\begin{enumerate}
+		\item Let $B$ be a basis of $V$, $B_1$ be the basis of $S$. Then let $B_2=B/B$, $\mathcal{T}=span\{B\}$. Then we have
+		$$B=B_1\cup B_2,\qquad B_1\cap B_2=\phi$$
+		By the conclusion from \textbf{Problem 1}, we have $V=span\{B_1\}\oplus span\{B_2\}=S\oplus\mathcal{T}$.
+		Q.E.D
+	\end{enumerate}
+\end{enumerate}

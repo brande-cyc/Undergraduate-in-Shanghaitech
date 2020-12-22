@@ -1,0 +1,31 @@
+\section{UNDERSTANDING THE MATRIX NORM}
+\begin{enumerate}
+	\item \textbf{Solution:}
+	\begin{enumerate}
+		\item the matrix 1-norm 
+		\begin{align*}
+		\left\|A\right\|_1  &=\max_{ \left\|x\right\|_1=1}  \left\|Ax\right\|_1 \\
+		&=\max_{ \left\|x\right\|_1=1} \left\|x_1\vec{a}_1+...+x_n\vec{a}_n\right\|_1\\
+		&\le \max_{ \left\|x\right\|_1=1} \left(\left\|x_1\vec{a}_1\right\|_1 +...+\left\|x_n\vec{a}_n\right\|_1 \right)\\
+		&= \max_{ \left\|x\right\|_1=1} \left(|x_1|\left\|\vec{a}_1\right\|_1 + ...+|x_n|\left\|\vec{a}_n\right\|_1\right)\\
+		&\le  \max_{ \left\|x\right\|_1=1}\left[ (|x_1|+...+|x|_n)\max_j	\left\|\vec{a}_j\right\|_1 \right]\\
+		&=\max_{j} \left\|\vec{a}_j\right\|_1 \\
+		&=\max_{j} \sum_{i}^m |a_{ij}|
+		\end{align*}
+		The equalities holds only when $x_{j^\star}=1$ where $j^\star$ corresponds to the column with largest absolute column sum. So the inequalities can be rewritten as equality
+		$$\left\|A\right\|_1 = \max_{j} \sum_{i}^m |a_{ij}|$$
+		Q.E.D.
+		\item the matrix $\infty$-norm
+		\begin{align*}
+		\left\|A\right\|_\infty &= \max_{\left\|x\right\|_\infty=1} \left\|Ax\right\|_\infty\\
+		&= \max_{\left\|x\right\|_\infty=1} \left\|[\vec{a}_1^Tx,...,\vec{a}_m^Tx]^T\right\|_\infty\quad(\vec{a}_j's \text{ are row vectors})\\
+		&= \max_{\left\|x\right\|_\infty=1} \max_j |\vec{a}_j^Tx|\\
+		&\le \max_{\left\|x\right\|_\infty=1}\max_j\left( \left\|\vec{a}_j^T\right\|_1 	\left\|x\right\|_\infty\right)\quad (Holder's Inequalities)\\
+		&=\max_j \left\|\vec{a}_j^T\right\|_1\\
+		&=\max_i \sum_{j}^{n}|a_{ij}|
+		\end{align*}
+		The euqalities holds only when $x_j=1$ if $a_{i^\star j}\ge 0$, $x_j=-1$ if $a_{i^\star j} <0$, where $i^\star$ corresponds to the row with largest absolute row sum. So the inequalities can be rewritten as equality
+		$$\left\|A\right\|_\infty =\max_i \sum_{j}^{n}|a_{ij}|$$
+		Q.E.D.
+	\end{enumerate}
+\end{enumerate}
