@@ -1,0 +1,61 @@
+\section{Orthogonality}
+\begin{enumerate}
+	
+	\item \textbf{Solution:}
+	\begin{enumerate}
+		\item Since $\mathcal{N}(A)$ is orthogonal complement to  $\mathcal{R}(A^T)$, then we have $\mathcal{N}(A) \cap \mathcal{R}(A^T)=\vec{0}, \dim(\mathcal{N}(A))+\dim(\mathcal{R}(A^T))=n$, which is equivalent to $\mathcal{N}(A)+\mathcal{R}(A^T)=\mathbb{R}^n$. Simply by the definition of direct sum, we have
+		$$\mathcal{N}(A)\oplus \mathcal{R}(A^T) = \mathbb{R}^n$$
+		Q.E.D.
+		\item Let $k_1, k_2$ denote the number of linear independent columns ,$\vec{a}_{k_1i}, \vec{a}_{k_2i}$ ,in A and B respectively. Then for $\forall \hat{a_i}, \hat{b_i}$, they can be represented by the linear combination of $\vec{a}_{k_1i}, \vec{a}_{k_2i}$
+		\begin{align*}
+		\vec{a}_i&=\sum_{j=1}^{k_1}\lambda_{ij}\vec{a}_{k_1i}\\
+		\vec{b}_i&=\sum_{j=1}^{k_2}\lambda_{ij}\vec{b}_{k_2i}
+		\end{align*}
+		For $\forall \vec{c}_i$ in matrix A+B, we can also represented $\vec{c}_i$ in the same way
+		\begin{align*}
+		\vec{c}_i&=\vec{a}_i+\vec{b}_i\\
+		&=\sum_{j=1}^{k_1}\lambda_{ij}\vec{a}_{k_1i}+\sum_{j=1}^{k_2}\lambda_{ij}\vec{b}_{k_2i}\\
+		&=\sum_{j=1}^{k_3}\gamma_{ij}c_{k_3j}
+		\end{align*}
+		Denote $S_1,S_2$ as the column space of A, B. By the properties of subspaces
+		$$k_3=\dim(S_1\cup S_2)\le\dim(S_1)+\dim(S_2)=rank(A)+rank(B)$$
+		This equality induce that
+		$$rank(A+B)=k_3\le Rank(A)+Rank(B)$$
+		Q.E.D.
+		\item First we show that rank(AB)$\le$rank(A). By the matrix multiplication
+		$$AB=[Ab_1, Ab_2,...,Ab_p]\triangleq [c_1,...,c_p]$$
+		Then we find $\forall \vec{c}_i = \sum_{j=1}^{rank(A)}\lambda_{ij}\vec{a}_j'$ is a linear combination of linear independent columns of A. Thus $\forall \vec{x}=\sum_j^{rank(AB)}\gamma_j\vec{c}_j$ can also be represented by the linear combination of $\vec{a}_j's$. This implies 
+		$$rank(AB)\le rank(A)$$
+		Secondly, we campain the same induction to B, finding the similar conclusion as above
+		$$rank(AB)\le rank(B)$$
+		So, here we have proved the first part of the proposition that
+		$$rank(AB)\le \min\{rank(A),rank(B)\}$$
+		When rank(AB) = n
+		\begin{itemize}
+			\item if rank(A)=n, and rank(B)$\ge$ n. Then rank(B) must equal to n beacause rank(B)$\le\min\{n,p\}$. This implies rank(B)=n. So A has full-column rank and B has full-row rank.
+			\item if rank(B)=n, and rank(A)$\ge$ n. Then rank(A) must equal to n beacause rank(A)$\le\min\{m,n\}$. This implies rank(A)=n. So A has full-column rank and B has full-row rank.
+		\end{itemize}
+		So we have proved the second part of proposition that rank(AB)=n only when A has full-column rank and B has full-row rank. Q.E.D.
+		
+		\item Firstly, we show that $\mathcal{R}(A|B)\subseteq \mathcal{R}(A)+\mathcal{R}(B)$. For $\forall \vec{x} \in \mathcal{R}(A|B)$
+		\begin{align*}
+		\vec{x} &= \sum_{j=1}^{n+p}\lambda_j\vec{c}_j=\sum_{j=1}^{n}\lambda_j\vec{c}_j+\sum_{j=n+1}^{n+p}\lambda_j\vec{c}_j\\&=\sum_{j=1}^{n}\lambda_j\vec{a}_j+\sum_{j=n+1}^{n+p}\beta_j\vec{b}_j\\&\subseteq \mathcal{R}(A)+\mathcal{R}(B)
+		\end{align*}
+		Secondly, we show that $ \mathcal{R}(A)+\mathcal{R}(B) \subseteq \mathcal{R}(A|B)$. For $\forall \vec{x} \in\mathcal{R}(A)+\mathcal{R}(B)$
+		\begin{align*}
+		\vec{x} &= \sum_{j=1}^{n}\lambda_j\vec{a}_j+\sum_{j=n+1}^{n+p}\beta_j\vec{b}_j\\
+		&=\sum_{j=1}^{n+p}c_j\\
+		&\subseteq \mathcal{R}(A|B)
+		\end{align*}
+		where $\vec{c}_j$'s are the columns of $\mathcal{R}(A|B)$. So we have proved that $\mathcal{R}(A|B)= \mathcal{R}(A)+\mathcal{R}(B)$. Q.E.D.
+		
+		\item Here I give my inductions through the concepts of vector space. Denote one basis of $\mathcal{R}(A)$ as $A$, one of $\mathcal{R}(B)$ as B, one of $\mathcal{R}(A|B)$ as C.
+		\begin{align*}
+		\dim(span\{C\}) &= \dim(span\{A\}+span\{B\}) (\text{Conclusion from problem 4})\\
+		&=\dim(\mathcal{R}(A)) + \dim(\mathcal{R}(B)) - dim(\mathcal{R}(A)\cap\mathcal{R}(B))\\
+		&=rank(A)+rank(B)-dim(\mathcal{R}(A)\cap\mathcal{R}(B)\\
+		\Rightarrow rank(A|B) &=rank(A)+rank(B)-dim(\mathcal{R}(A)\cap\mathcal{R}(B)
+		\end{align*}
+		Q.E.D.
+	\end{enumerate}
+\end{enumerate}
