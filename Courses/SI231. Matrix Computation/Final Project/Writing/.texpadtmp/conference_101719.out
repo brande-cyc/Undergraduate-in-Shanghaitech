@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Framework and Notation}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Markov Decision Process}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Linear Value Function Approximation}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Fixed-Point Method}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Linear Model}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Bellman Operator and Bellman Error}{subsection.2.2}% 7
+\BOOKMARK [1][-]{section.3}{Related Work}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Overview of the Existing Work}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Feature Selection}{subsection.3.1}% 10
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Feature Construction}{subsection.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Criticism of the Existing Work}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{New contribution}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{DISCO for Finite State Space}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{DISCO for Infinite State Space}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.3}{Relationship to LFD and SVD+R}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Numerical results}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{Cart-Pole}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Simulation Results and Analysis}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Conclusions and Future work}{}% 20
+\BOOKMARK [1][-]{section*.1}{References}{}% 21
