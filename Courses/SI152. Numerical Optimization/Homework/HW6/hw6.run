@@ -1,0 +1,8 @@
+reset;
+model /Users/taou/Documents/Learning/Course/数值最优化/Homework6/hw6.mod;
+data /Users/taou/Documents/Learning/Course/数值最优化/Homework6/hw6.dat;
+option solver gurobi;
+solve;
+display sum {i in dest} x[i];
+display sum {i in begin} g[i] * p[i] /  sum {j in begin} p[j];
+display COST;

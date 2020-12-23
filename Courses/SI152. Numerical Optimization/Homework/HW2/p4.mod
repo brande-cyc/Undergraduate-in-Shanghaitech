@@ -1,0 +1,26 @@
+var x; var y;
+var A; var B;
+var p;
+var Cx; var Cy;
+var Px; var Py;
+maximize profit: 9 * x + 15 * y - 6 * A - 8 * B - 10 * (Cx + Cy);
+subject to cons1: Px + Py - A - B = 0;
+subject to cons2: x - Px - Cx = 0;
+subject to cons3: y - Py - Cy = 0;
+subject to cons4: p * Px + 2 * Cx - 2.5 * x <= 0;
+subject to cons5: p * Py + 2 * Cy - 1.5 * y <= 0;
+subject to cons6: p * Px + p * Py - 3 * A - B = 0;
+subject to rcons7: 0 <= x <= 200;
+subject to cons8: 0 <= y <= 200;
+subject to cons9: 0 <= p <= 100;
+subject to cons10: 0 <= A <= 500;
+subject to cons11: 0 <= B <= 500;
+subject to cons12: 0 <= Cx <= 500;
+subject to cons13: 0 <= Cy <= 500;
+subject to cons14: 0 <= Px <= 500; 
+subject to cons15: 0 <= Py <= 500;
+option solver baron;
+solve;
+display profit;
+display x, y, A, B, p, Cx, Cy, Px, Py;
+
